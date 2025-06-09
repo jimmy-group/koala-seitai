@@ -1,0 +1,256 @@
+/* === 全体設定 === */
+body {
+  margin: 0;
+  background-color: #f7e3e7; /* PC時の左右余白の背景色 */
+  font-family: 'Noto Sans JP', sans-serif;
+  color: #333;
+  line-height: 1.6;
+  
+}
+
+/* === 中央コンテンツラッパー === */
+.wrapper {
+  max-width: 630px;
+  margin: 0 auto;
+  background-color: #f7e3e7; /* コンテンツ背景色 */
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+/* === ヘッダーナビ === */
+.site-header {
+  background-color: #fff;
+  padding: 16px 20px;
+  border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ロゴ */
+.logo {
+  font-size: 1.2rem;
+  font-family: 'Playfair Display', serif;
+  font-weight: bold;
+  color: #6ec5a6;
+  letter-spacing: 0.4rem;
+}
+
+/* ロゴ画像 */
+.logo img {
+  height: 40px; /* 必要に応じて調整 */
+  display: block;
+}
+
+/* ハンバーガー */
+.hamburger {
+  width: 24px;
+  height: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  height: 2px;
+  background-color: #b84a62;
+  border-radius: 1px;
+}
+
+.nav-menu {
+  display: none;
+  flex-direction: column;
+  background-color: #fff;
+  position: absolute;
+  top: 70px;
+  right: 0px;
+  width: 230px;
+  border: 1px solid #eee;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  z-index: 998;
+}
+
+.nav-menu.active {
+  display: flex;
+}
+
+/* ナビメニュー全体のスタイル */
+.nav-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: #fff;
+  text-align: center;
+}
+
+.nav-menu ul li {
+  border-bottom: 1px solid #eee;
+}
+
+.nav-menu ul li a {
+  display: block;
+  padding: 14px 20px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* ホバー時の効果 */
+.nav-menu ul li a:hover {
+  background-color: #f7e7eb;  /* 薄いピンク系背景 */
+  color: #b84a62;              /* メインカラーに合わせた色 */
+}
+
+/* === 各セクション === */
+.section {
+  padding: 40px 20px;
+}
+
+.hero {
+  width: 100%;
+  height: auto;
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+h2 {
+  text-align: center;
+  color: #555;
+}
+
+/* === introリスト === */
+.intro {
+  background-color: #fff9f5;
+  height: auto;
+}
+
+.intro ul {
+  list-style: none;
+  line-height: 4rem;
+}
+
+.intro li::before {
+  content: "✔︎ ";
+  color: #b84a62;
+  font-weight: bold;
+  margin-right: 0.5em;
+}
+
+.intro img {
+  padding-top: 40px;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.solusion img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* === サービス紹介 === */
+.services {
+  background-image: url(images/service_background.jpg);
+  
+}
+
+.services .service {
+  border-radius: 12px;
+  padding: 20px;
+  margin: 30px 10px;
+}
+
+.services .service h3 {
+  text-align: center;
+  color: #b84a62;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.services .service p {
+  line-height: 2.2;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.service img {
+  width: 80%;
+  height: auto;
+  margin-top: 10px;
+  display: block;
+  margin:20px auto;
+}
+
+img.yomogimusi {
+  width: 240px;
+}
+
+.reason img {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.cta {
+  background: linear-gradient(135deg, #fef9e2, #ffeef2);
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.cta-inner {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.cta h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+.cta h2 span {
+  color: #e57395;
+  font-style: italic;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: #f9cc58;
+  color: #fff;
+  padding: 14px 30px;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #a23950;
+}
+
+
+
+/* === フッター === */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background: #fafafa;
+  font-size: 0.8rem;
+  color: #999;
+}
